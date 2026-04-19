@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const { getMyProfile, updateProfile, updateLocation, getNearbyVolunteers } = require('../controllers/volunteerController');
+const { protect, authorize } = require('../middleware/auth');
+router.use(protect);
+router.get('/nearby', getNearbyVolunteers);
+router.get('/me', authorize('volunteer'), getMyProfile);
+router.put('/me', authorize('volunteer'), updateProfile);
+router.put('/location', authorize('volunteer'), updateLocation);
+module.exports = router;
