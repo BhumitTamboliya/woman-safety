@@ -290,14 +290,7 @@ const Login = () => {
               New user? <Link to="/register">Register here</Link>
             </div>
 
-            <div className="demo-section">
-              <div className="demo-label">Demo Credentials</div>
-              <div className="demo-btns">
-                <button className="demo-btn" onClick={() => setForm({ ...form, email: 'priya@test.com', password: 'Test@123' })}>👤 User</button>
-                <button className="demo-btn" onClick={() => setForm({ ...form, email: 'arjun@test.com', password: 'Test@123' })}>🤝 Volunteer</button>
-                <button className="demo-btn" onClick={() => setForm({ ...form, email: 'admin@safeguard.com', password: 'Admin@123' })}>⚙️ Admin</button>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
